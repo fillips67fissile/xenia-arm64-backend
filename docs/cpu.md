@@ -106,7 +106,7 @@ addi      r11, r9, 0x200
 rlwinm    r11, r11, 0,19,19 # r11 = r11 & 0x1000
 add       r11, r11, r10     # add 1 page to addresses > 0xE0000000
 
-# r11 = addess passed to GPU
+# r11 = address passed to GPU
 ```
 
 ## Memory Management
