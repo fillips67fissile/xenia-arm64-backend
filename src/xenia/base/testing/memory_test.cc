@@ -27,16 +27,16 @@ TEST_CASE("copy_128_aligned", "[copy_and_swap]") {
   }
   std::memset(dest, 0, sizeof(dest));
   copy_128_aligned(dest, src, 1);
-  REQUIRE(std::memcmp(dest, src, 128));
+  REQUIRE(std::memcmp(dest, src, 128) == 0);
   REQUIRE(dest[128] == 0);
 
   std::memset(dest, 0, sizeof(dest));
   copy_128_aligned(dest, src, 2);
-  REQUIRE(std::memcmp(dest, src, 256));
+  REQUIRE(std::memcmp(dest, src, 256) == 0);
 
   std::memset(dest, 0, sizeof(dest));
   copy_128_aligned(dest, src + 1, 1);
-  REQUIRE(std::memcmp(dest, src + 1, 128));
+  REQUIRE(std::memcmp(dest, src + 1, 128) == 0);
 }
 
 TEST_CASE("copy_and_swap_16_aligned", "[copy_and_swap]") {
