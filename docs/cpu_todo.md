@@ -146,7 +146,7 @@ Translates to (something like):
   vor(xmm2, xmm2, xmm2)
 ```
 
-Where as it could be:
+Whereas it could be:
 ```
   vor(xmm2, xmm2, [rip+0x...])
 ```
